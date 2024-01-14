@@ -1,4 +1,4 @@
-package com.rrk.learnspringframework;
+package com.rrk.learnspringframework.helloworld;
 
 import java.util.Arrays;
 
