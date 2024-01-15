@@ -26,15 +26,26 @@ class YourBusinessClass {
 	
 	Dependency2 dependency2;	
 
-	@Autowired
-	public void setDependency1(Dependency1 dependency1) {
-		this.dependency1 = dependency1;
-	}
-	
-	@Autowired
-	public void setDependency2(Dependency2 dependency2) {
-		this.dependency2 = dependency2;
-	}
+	// Spring team recommends Constructor-based injection
+	// as dependencies are automatically set when an object is created
+	public YourBusinessClass(Dependency1 dependency1, Dependency2 dependency2) {
+			super();
+			System.out.println("Constructor Injection - YourBusinessClass");
+			this.dependency1 = dependency1;
+			this.dependency2 = dependency2;
+		}
+
+//	@Autowired
+//	public void setDependency1(Dependency1 dependency1) {
+//		System.out.println("Setter Injection - setDependency1");
+//		this.dependency1 = dependency1;
+//	}
+//	
+//	@Autowired
+//	public void setDependency2(Dependency2 dependency2) {
+//		System.out.println("Setter Injection - setDependency2");
+//		this.dependency2 = dependency2;
+//	}
 	
 	public String toString() {
 		return "Using " + dependency1 + " and " + dependency2;
