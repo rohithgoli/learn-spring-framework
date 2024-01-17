@@ -1,8 +1,10 @@
 package com.rrk.learnspringframework.businessCalculationApplicationLauncher;
 
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
-@Component
+//@Component
+@Repository
 public class MySqlDataService implements DataService{
 
 	public int[] retrieveData() {
